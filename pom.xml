@@ -126,12 +126,6 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>AllTest.xml</suiteXmlFile>
 					</suiteXmlFiles>
-					<properties>
-						<property>
-							<name>testnames</name>
-							<value>${Test}</value>
-						</property>
-					</properties>
 				</configuration>
 
 			</plugin>

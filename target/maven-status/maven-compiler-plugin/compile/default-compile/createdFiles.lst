@@ -1,0 +1,13 @@
+BusinessworkFlowLibrary\ReusableClass.class
+com\purplle\genericLibrary\PropertiesClass.class
+com\purplle\genericLibrary\IAutoConstants.class
+com\purplle\pomRepository\ProductBrandPage.class
+com\purplle\genericLibrary\TakeSnapShot.class
+com\purplle\pomRepository\ProductPage.class
+com\purplle\genericLibrary\ExcelUtility.class
+com\purplle\genericLibrary\JavaUtility.class
+com\purplle\genericLibrary\ListenerImplementationClass.class
+com\purplle\genericLibrary\WebDriverUtilityClass.class
+com\purplle\pomRepository\CartPage.class
+com\purplle\pomRepository\HomePage.class
+com\purplle\genericLibrary\BaseClass.class
