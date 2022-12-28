@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Purplle web application]]>
+    </line>
+    <line>
+      <![CDATA[Browser Launched successfully]]>
+    </line>
+    <line>
+      <![CDATA[Window is maximized successfully]]>
+    </line>
+    <line>
+      <![CDATA[browser closed successfully]]>
+    </line>
+    <line>
+      <![CDATA[report generated]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-12-28T18:35:27 IST" name="Default suite" finished-at="2022-12-28T18:36:03 IST" duration-ms="35388">
+    <groups>
+    </groups>
+    <test started-at="2022-12-28T18:35:27 IST" name="Default test" finished-at="2022-12-28T18:36:03 IST" duration-ms="35388">
+      <class name="com.purplle.EndToEndTests.TC_Purplle_002">
+        <test-method is-config="true" signature="ProjectDocuments()[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:35:27 IST" name="ProjectDocuments" finished-at="2022-12-28T18:35:27 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Purplle web application]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ProjectDocuments -->
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:35:27 IST" name="launchTheBrowser" finished-at="2022-12-28T18:35:28 IST" duration-ms="383" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Launched successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="maximizeWindow()[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:35:28 IST" name="maximizeWindow" finished-at="2022-12-28T18:35:29 IST" duration-ms="1138" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Window is maximized successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- maximizeWindow -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:35:30 IST" name="beforeMethod" finished-at="2022-12-28T18:35:39 IST" duration-ms="9065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="addProductToThecartAndVerifyTheCartThroghIcon(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:35:39 IST" name="addProductToThecartAndVerifyTheCartThroghIcon" data-provider="EnterData" finished-at="2022-12-28T18:36:02 IST" duration-ms="22723" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BRANDS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[featured]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.purplle.com/brand/loreal]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Hair Color]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Natural Brown/Natural Dark Bro]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductToThecartAndVerifyTheCartThroghIcon -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:36:02 IST" name="afterMethod" finished-at="2022-12-28T18:36:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:36:02 IST" name="afterClass" finished-at="2022-12-28T18:36:03 IST" duration-ms="606" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[browser closed successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="ReportGenerate()[pri:0, instance:com.purplle.EndToEndTests.TC_Purplle_002@593aaf41]" started-at="2022-12-28T18:36:03 IST" name="ReportGenerate" finished-at="2022-12-28T18:36:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[report generated]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ReportGenerate -->
+      </class> <!-- com.purplle.EndToEndTests.TC_Purplle_002 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
