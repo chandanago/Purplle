@@ -52,7 +52,6 @@ public class TC_Purplle_002 extends BaseClass {
 	} 
 
 	/**
-	 * 
 	 * By using DataProvider we can run the same script with different data
 	 * @return
 	 */

@@ -51,16 +51,21 @@ public class BaseClass implements IAutoConstants {
 	@BeforeTest(alwaysRun=true)
 	public void launchTheBrowser() {
 
+		//System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		WebDriverManager.chromedriver().setup(); 
 		Reporter.log("Browser Launched successfully",true);
 	}
 
+//	@Parameters("Browser")
 	@BeforeClass
 	public void maximizeWindow() {
+		
+		if(System.getProperty("browser").equalsIgnoreCase("Chrome")) {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("incognito");
 		options.addArguments("--disable-notifications");
 		driver=new ChromeDriver(options);
+		}
 		driver.manage().window().maximize();
 		Reporter.log("Window is maximized successfully",true);
 		driver.manage().timeouts().implicitlyWait(ITO, TimeUnit.SECONDS);

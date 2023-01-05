@@ -85,9 +85,9 @@ public class TC_Purplle_001 extends BaseClass {
 		String subCategory = excelData.readDataFromExcel("addToCart", 1, 1);
 		String productType = excelData.readDataFromExcel("addToCart", 1, 2);
 		String brand = excelData.readDataFromExcel("addToCart", 1, 3);
-		//String brand1 = excelData.readDataFromExcel("addToCart", 2, 3);
+		String brand1 = excelData.readDataFromExcel("addToCart", 2, 3);  //maybelline
 		String product = excelData.readDataFromExcel("addToCart", 1, 4);
-		//String product1 = excelData.readDataFromExcel("addToCart", 2, 4);
+		String product1 = excelData.readDataFromExcel("addToCart", 2, 4);  //lipbalm
 		return new String[][] { {category, subCategory, productType, brand, product}};
 	}
 }

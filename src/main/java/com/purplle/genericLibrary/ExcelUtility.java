@@ -11,6 +11,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -21,6 +22,10 @@ import org.testng.annotations.DataProvider;
 
 public class ExcelUtility  {
 	static PropertiesClass property = new PropertiesClass();
+	public static HSSFWorkbook workbook;
+	 public static HSSFSheet worksheet;
+	 public static DataFormatter formatter= new DataFormatter();
+	 
 
 	/**
 	 * This method is used to read data from Excel based on below parameters
@@ -30,7 +35,7 @@ public class ExcelUtility  {
 	 * @return String 
 	 */
 	public String readDataFromExcel(String sheetName,int rowNo,int cellNo)  {
-		File absPath = new File(property.readDataFromProperty("EXCELDATA_PATH"));
+		File absPath = new File(property.readDataFromProperty("EXCELDATA_PATH1"));
 		Workbook wrkbook=null;
 		try {
 			FileInputStream fis= new FileInputStream(absPath);
@@ -165,33 +170,50 @@ public class ExcelUtility  {
 		return data;
 	}
 
+
 	
-//	  public String[][] getExcelData(String sheetName) throws IOException {
-//	        String[][] data = null;
-//	        try {
-//	             
-//	            FileInputStream fis = new FileInputStream(property.readDataFromProperty("EXCELDATA_PATH"));
-//	            XSSFWorkbook workbook = new XSSFWorkbook(fis);
-//	            XSSFSheet sheet = workbook.getSheet(sheetName);
-//	            XSSFRow row = sheet.getRow(0);
-//	            int noOfRows = sheet.getPhysicalNumberOfRows();
-//	            int noOfCols = row.getLastCellNum();
-//	            Cell cell;
-//	            data = new String[noOfRows - 1][noOfCols];
-//	 
-//	            for (int i = 1; i < noOfRows; i++) {
-//	                for (int j = 0; j < noOfCols; j++) {
-//	                    row = sheet.getRow(i);
-//	                    cell = row.getCell(j);
-//	                    data[i - 1][j] = cell.getStringCellValue();
-//	                }
-//	            }
-//	        } catch (Exception e) {
-//	            System.out.println("The exception is: " + e.getMessage());
-//	        }
-//	        return data;
-//	 }
+	/**
+     * Data provider used for 1 product
+     *
+     * 
+     */
+    @DataProvider(name="ReadVariant1")
+	public static Object[][] ReadVariant() throws IOException
+	 {
+    	FileInputStream fis=new FileInputStream(property.readDataFromProperty("EXCELDATA_PATH")); //Excel sheet file location get mentioned here
+	 HSSFWorkbook workbook = new HSSFWorkbook (fis); //get my workbook 
+	  worksheet = workbook.getSheet("removeFromCart");// get my sheet from workbook
+	       HSSFRow Row=worksheet.getRow(0);   //get my Row which start from 0   
+	   
+	    	int RowNum = worksheet.getPhysicalNumberOfRows();// count my number of Rows
+	    	int ColNum= Row.getLastCellNum(); // get last ColNum 
+	    	
+	    	Object Data[][]= new Object[RowNum-1][ColNum]; // pass my  count data in array
+	    	
+	     for(int i=0; i<RowNum-1; i++) //Loop work for Rows
+	     {  
+	     HSSFRow row= worksheet.getRow(i+1);
+	     
+	     for (int j=0; j<ColNum; j++) //Loop work for colNum
+	     {
+	     if(row==null)
+	     Data[i][j]= "";
+	     else 
+	     {
+	     HSSFCell cell= row.getCell(j);
+	     if(cell==null)
+	     Data[i][j]= ""; //if it get Null value it pass no data 
+	     else
+	     {
+	     String value=formatter.formatCellValue(cell);
+	     Data[i][j]=value; //This formatter get my all values as string i.e integer, float all type data value
+	     }
+	     }
+	     }
+	     }
 	 
+	    	return Data;
+	    }
 	  
 }
 

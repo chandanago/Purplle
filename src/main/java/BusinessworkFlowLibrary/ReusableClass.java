@@ -30,8 +30,8 @@ public class ReusableClass {
 		map.put("password", property.readDataFromProperty("password"));
 		map.put("prodBrandPage", property.readDataFromProperty("ProductBrandPage"));
 		map.put("itemAddedToCart_Overlay", excelData.readDataFromExcel("addToCart", 1, 6));
-		map.put("enterPinCode", excelData.readDataFromExcel("addToCart", 2, 6));
-		map.put("PinCodeSuccessful_Msg", excelData.readDataFromExcel("addToCart", 3, 6));
+		map.put("enterPinCode", excelData.readDataFromExcel("addToCart", 1, 7));
+		map.put("PinCodeSuccessful_Msg", excelData.readDataFromExcel("addToCart", 1, 8));
 		map.put("shoppingCartUrl", property.readDataFromProperty("ShoppinCart_Url"));
 		map.put("ProductPage", property.readDataFromProperty("ProductPage"));
 	
@@ -39,9 +39,7 @@ public class ReusableClass {
 	}
 
 
-	
 	public void existUserLogin(WebDriver driver) {
-		
 		HomePage homePage = new HomePage(driver);
 		WebDriverUtilityClass webDriverUtil = new WebDriverUtilityClass();
 		String parentWnd = driver.getWindowHandle();
@@ -128,7 +126,6 @@ public class ReusableClass {
 		//click on viewcart button
 		webDriverUtil.clickDisabledElement(productPage.getViewCartBtn(), driver);
 		webDriverUtil.explicitlyWaitForUrl(driver, readData().get("shoppingCartUrl"));
-
 	}
 
 /**

@@ -6,6 +6,7 @@
 			<class name="com.purplle.EndToEndTests.TC_Purplle_001" />
 		</classes>
 	</test>
+	
 	<test name="TC_Purplle_002">
 		<classes>
 			<class name="com.purplle.EndToEndTests.TC_Purplle_002" />
